@@ -11,20 +11,32 @@
 
 (function() {
     // to get the value of an input: document.getElementById("element-id").value
+    const x = () => {
+        a = parseInt(document.getElementById("op-one").value);
+        b = parseInt(document.getElementById("op-two").value);
+    }
 
     document.getElementById("addition").addEventListener("click", function() {
         // perform an addition
+        x();
+        alert(a+" + "+b+" = "+(a+b));
     });
 
     document.getElementById("substraction").addEventListener("click", function() {
         // perform an substraction
+        x();
+        alert(a+" - "+b+" = "+(a-b));
     });
 
     document.getElementById("multiplication").addEventListener("click", function() {
         // perform an multiplication
+        x();
+        alert(a+" * "+b+" = "+(a*b));
     });
 
     document.getElementById("division").addEventListener("click", function() {
         // perform an division
+        x();
+        alert(a+" / "+b+" = "+(a/b).toFixed(2));
     });
 })();
