@@ -9,22 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-    var a=new Date();
-    var year1=a.getFullYear();
-    var month1=a.getMonth();
-    var days1=a.getDay();
-    var time1=days1*24*60*60+month1*30*24*24*60*60+year1*12*30*24*60*60;
+(function(){
+    document.getElementById("run").addEventListener("click",function () {
+        let dobYear = document.getElementById('dob-year').value;
+        let dobMonth = document.getElementById('dob-month').value;
+        let dobDate = document.getElementById('dob-day').value;
 
+        var now=new Date();
+        let nowYear=now.getUTCFullYear();
+        let nowMonth=now.getMonth();
+        let nowDate=now.getDate();
 
-    document.getElementById("run").addEventListener("click",function ({
-        var year2=document.getElementById("dob-year").value;
-        var month2=document.getElementById("dob-month").value;
-        var days2=document.getElementById("dob-day").value;
-        var
-
-                                                                      }))
-
-    // your code here
-
+        var a = new Date(nowYear-dobYear,nowMonth-dobMonth,nowDate-dobDate);
+        var age=a.getUTCFullYear();
+        age = age.toString().substr(-2);
+        alert("Your age is: "+age+".")
+    })
 })();
