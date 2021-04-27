@@ -28,6 +28,10 @@
 
     // your code here
     document.getElementById("run").addEventListener("click",function (){
-        fruits.forEach(fruit=>console.log(fruit));
+        fruits.forEach(fruit=> {
+            console.log(fruit);
+            let changeContant=document.getElementsByClassName("explain")[0];
+            changeContant.innerHTML += fruit+".<br />";
+        });
         })
 })();

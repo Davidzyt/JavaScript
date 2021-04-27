@@ -95,8 +95,9 @@
             if (person.firstname==="Jean"&&person.lastname==="Dupont"){
                 console.log(person.email);
                 console.log(people.indexOf(person));
+                let changeContant=document.getElementsByClassName("explain")[0];
+                changeContant.innerHTML +="Jean Dupont is the "+people.indexOf(person)+"th person.<br />His email is "+people[people.indexOf(person)].email+" .<br />";
             }
         })
     })
-
 })();

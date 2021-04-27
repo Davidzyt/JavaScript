@@ -30,9 +30,13 @@
     document.getElementById("run").addEventListener("click",function (){
         if(fruits.includes("apple")===true){
             console.log("Yes, there is apple in array");
+            let changeContant=document.getElementsByClassName("explain")[0];
+            changeContant.innerHTML +="Yes, there is apple in array."+"<br />";
         }
         else{
             console.log("No, there is no apple in array");
+            let changeContant=document.getElementsByClassName("explain")[0];
+            changeContant.innerHTML +="No,there is no apple in array."+"<br />";
         }
     })
 

@@ -41,7 +41,12 @@
 
     // your code here
     document.getElementById("run").addEventListener("click",function (){
-        people.forEach(person =>console.log(person.firstname+" "+person.lastname))
+        people.forEach(person =>{
+            console.log(person.firstname+" "+person.lastname);
+            let changeContant=document.getElementsByClassName("explain")[0];
+            changeContant.innerHTML += person.firstname+" "+person.lastname+".<br />";
+        })
+
     })
 
 })();

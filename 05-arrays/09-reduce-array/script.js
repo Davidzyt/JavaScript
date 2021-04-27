@@ -90,5 +90,13 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click",function (){
+        const ageInTotal=people.reduce(function (result,person) {
+            return result + person.age;
+        },0);
+        console.log("Total ages of the people in the array are :"+ageInTotal+" .");
 
+        let changeContant=document.getElementsByClassName("explain")[0];
+        changeContant.innerHTML +="Total ages of the people in the array are: "+ageInTotal +".<br />";
+    })
 })();

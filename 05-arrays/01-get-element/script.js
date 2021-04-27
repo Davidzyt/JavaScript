@@ -30,6 +30,8 @@
     const buttonRun=document.getElementById("run");
     buttonRun.addEventListener("click",function (){
         console.log("The fourth item from the array is:"+fruits[3]+".");
+        let changeContant=document.getElementsByClassName("explain")[0];
+        changeContant.innerHTML ="The fourth item from the array is:"+fruits[3]+". <br />";
     })
 
 })();
