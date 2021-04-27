@@ -11,7 +11,7 @@
 
 (function() {
 
-    var fruits = [
+    const fruits = [
         "pomme",
         "poire",
         "fraise",
@@ -25,5 +25,17 @@
     ];
 
     // your code here
+    const buttonRun=document.getElementById("run");
+    buttonRun.addEventListener("click",function (){
+        fruits.shift();
+        fruits.pop();
+        fruits.unshift("banana");
+        fruits.push("kiwi");
+
+        let changeContant=document.getElementsByClassName("explain")[0];
+        changeContant.innerHTML ="The new array is:"+"<br />"+fruits;
+        console.log("The new array is:\n"+fruits);
+
+    })
 
 })();
