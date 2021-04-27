@@ -10,13 +10,14 @@
 // You will have time to focus on it later.
 
 (function() {
-    document.getElementById("run").addEventListener("click",function (){
-        var r=Math.floor(Math.random()*256);
-        var g=Math.floor(Math.random()*256);
-        var b=Math.floor(Math.random()*256);
+
+    const button=document.getElementById("run");
+
+    button.addEventListener("click",function (){
+        let r=Math.floor(Math.random()*256);
+        let g=Math.floor(Math.random()*256);
+        let b=Math.floor(Math.random()*256);
         document.body.style.backgroundColor="rgb("+r+","+g+","+b+")";
     })
-
-    // your code here
 
 })();

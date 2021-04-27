@@ -10,8 +10,8 @@
 // You will have time to focus on it later.
 
 (function() {
-    var name=prompt("Your name?");
-    alert("Hello, "+name+" !")
+    let name=prompt("Your name?");
+    alert("Hello, "+ name +" !")
 
     // your code here
 

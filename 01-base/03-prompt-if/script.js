@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-    var cake=prompt("Would you like some cakes?");
+    let cake=prompt("Would you like some cakes?");
     if(cake==="yes"){
         alert("Congratulations!");
     }
