@@ -10,11 +10,23 @@
 // You will have time to focus on it later.
 
 (function () {
-    document.getElementById("run").addEventListener("click", function () {
 
-        const year = document.getElementById("year").value;
-    };
+    const buttonRun=document.getElementById("run");
 
+    buttonRun.addEventListener("click", function () {
+
+        const selectYearValue = document.getElementById("year").value;
+
+            for (let month = 0; month < 12; month++) {
+                let selectDate = new Date(selectYearValue, month, 13);
+                if (selectDate.getDay() == 5) {
+                    let dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+                    let changeContant=document.getElementsByClassName("explain")[0];
+                    changeContant.innerHTML += selectDate.toLocaleDateString("en-gb",dateOptions)+"<br />";
+                }
+            }
+        }
+)
 })();
 
 
