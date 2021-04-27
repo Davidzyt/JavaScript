@@ -10,17 +10,20 @@
 // You will have time to focus on it later.
 
 (function() {
-    var x=new Date();
-    var hour=x.getHours();
-    if(hour<=18){
-        document.getElementById("target").innerText="Hello";
-    }
-    else{
-        document.getElementById("target").innerText="Good Evening";
-    }
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
+    const target=document.getElementById("target");
+
+    let currentTime=new Date();
+    let hours=currentTime.getHours();
+
+    if(hours<18){
+        target.innerText="Hello";
+    }
+    else{
+        target.innerText="Good Evening";
+    }
 
 })();

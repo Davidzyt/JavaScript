@@ -10,19 +10,30 @@
 // You will have time to focus on it later.
 
 (function(){
-    document.getElementById("run").addEventListener("click",function () {
+
+    const buttonRun=document.getElementById("run");
+
+    buttonRun.addEventListener("click",function () {
         let dobYear = document.getElementById('dob-year').value;
         let dobMonth = document.getElementById('dob-month').value;
         let dobDate = document.getElementById('dob-day').value;
 
-        var now=new Date();
-        let nowYear=now.getUTCFullYear();
-        let nowMonth=now.getMonth();
-        let nowDate=now.getDate();
+        let currentTime=new Date();
+        let currentYear=currentTime.getUTCFullYear();
+        let currentMonth=currentTime.getMonth();
+        let currentDate=currentTime.getDate();
 
-        var a = new Date(nowYear-dobYear,nowMonth-dobMonth,nowDate-dobDate);
-        var age=a.getUTCFullYear();
-        age = age.toString().substr(-2);
+        let age=currentYear-dobYear;
+
+        if(currentMonth<dobMonth){
+            age=age-1;
+        }
+        else {
+            if(currentMonth=dobMonth&&currentDate<dobDate){
+                age=age-1;
+            }
+        }
         alert("Your age is: "+age+".")
     })
+
 })();

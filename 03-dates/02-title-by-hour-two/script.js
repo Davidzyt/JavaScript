@@ -10,26 +10,30 @@
 // You will have time to focus on it later.
 
 (function() {
-    var x=new Date();
-    var hours=x.getHours();
-    var mins=x.getMinutes();
-    if (hours<17){
-        document.getElementById("target").innerText="Hello";
-    }
-    else if(hours>18){
-        document.getElementById("target").innerText="Good Evening";
-    }
-    else{
-        if(mins<30){
-            document.getElementById("target").innerText="Hello";
-        }
-        else{
-            document.getElementById("target").innerText="Good Evening";
-        }
-    }
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
+
+    const target=document.getElementById("target");
+
+    let currentTime=new Date();
+    let hours=currentTime.getHours();
+    let mins=currentTime.getMinutes();
+
+    if (hours<17){
+        target.innerText="Hello";
+    }
+    else if(hours>18){
+        target.innerText="Good Evening";
+    }
+    else{
+        if(mins<30){
+            target.innerText="Hello";
+        }
+        else{
+            target.innerText="Good Evening";
+        }
+    }
 
 })();
