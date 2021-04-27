@@ -11,10 +11,16 @@
 
 (function() {
 
-    document.getElementById("run").addEventListener("click", function() {
+    const buttonRun=document.getElementById("run");
 
-        // your code here
+    buttonRun.addEventListener("click", function() {
 
+        for(let x=1;x<=21;x++){
+            if(Math.pow(x,2)<=21){
+                let changeContant=document.getElementsByClassName("explain")[0];
+                changeContant.innerHTML += Math.pow(x,2)+" is squre of "+x+"<br />";
+            }
+        }
     });
 
 })();

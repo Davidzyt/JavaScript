@@ -16,7 +16,14 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        let number = document.getElementById("number").value;
+        let result=1;
+        for(let x=1;x<=number;x++){
+            result=result*x;
+        }
+        let changeContant=document.getElementsByClassName("explain")[0];
+        changeContant.innerHTML += number+"'s factorial is:"+result+".<br />";
 
-    });
+    })
 
 })();
