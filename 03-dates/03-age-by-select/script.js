@@ -29,11 +29,11 @@
             age=age-1;
         }
         else {
-            if(currentMonth=dobMonth&&currentDate<dobDate){
+            if(currentMonth==dobMonth&&currentDate<dobDate){
                 age=age-1;
             }
         }
-        alert("Your age is: "+age+".")
+        alert("Your age is: "+age+".");
     })
 
 })();
