@@ -27,5 +27,15 @@
     ];
 
     // your code here
+    const buttonRun=document.getElementById("run");
+
+    buttonRun.addEventListener("click",function (){
+
+        for(let x=0;x<fruits.length;x++){
+            console.log(fruits[x]);
+            let changeContant=document.getElementsByClassName("explain")[0];
+            changeContant.innerHTML ="The fruits array is:"+"<br />"+fruits;
+        }
+    })
 
 })();
