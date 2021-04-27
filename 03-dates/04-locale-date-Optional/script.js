@@ -19,33 +19,9 @@ function printTime() {
 
     const currentDate = new Date();
 
-    let year = currentDate.getUTCFullYear();
-    let month = currentDate.getMonth();
-    let date = currentDate.getDate();
-    let day = currentDate.getDay();
-    let hour = currentDate.getHours();
-    let min = currentDate.getMinutes();
-    let sec = currentDate.getSeconds();
+    let dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',second:'2-digit' };
 
-    function getWeekDay() {
-        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        return days[day];
-    }
-    function getMonth(){
-        let months=["January","February","March","April","May","June","July","August","September","October","November","December"];
-        return months[month];
-    }
-
-    changeTarget.innerHTML = getWeekDay() + " " + date + " " + getMonth() + " " + year + ", " + hour + ":" + min + ":" + sec;
-    if (sec <= 9) {
-        changeTarget.innerHTML = getWeekDay() + " " + date + " " + getMonth() + " " + year + ", " + hour + ":" + min + ":" + 0 + sec;
-    }
-    if (min <= 9) {
-        changeTarget.innerHTML = getWeekDay() + " " + date + " " + getMonth() + " " + year + ", " + hour + ":" + 0 + min + ":" + sec;
-    }
-    if (hour <= 9) {
-        changeTarget.innerHTML = getWeekDay() + " " + date + " " + getMonth() + " " + year + ", " + 0 + hour + ":" + 0 + min + ":" + sec;
-    }
+    changeTarget.innerHTML = currentDate.toLocaleDateString("en-gb",dateOptions);
 
     setInterval(printTime, 1000);
 }
