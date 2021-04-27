@@ -14,35 +14,40 @@ function printTime() {
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
-    var d = new Date();
-    var year = d.getUTCFullYear();
-    var month = d.getMonth();
-    var date = d.getDate();
-    var day = d.getDay();
-    var hour = d.getHours();
-    var min = d.getMinutes();
-    var sec = d.getSeconds();
+
+    const changeTarget=document.getElementById("target");
+
+    const currentDate = new Date();
+
+    let year = currentDate.getUTCFullYear();
+    let month = currentDate.getMonth();
+    let date = currentDate.getDate();
+    let day = currentDate.getDay();
+    let hour = currentDate.getHours();
+    let min = currentDate.getMinutes();
+    let sec = currentDate.getSeconds();
 
     function getWeekDay() {
-        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         return days[day];
     }
     function getMonth(){
-        var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+        let months=["January","February","March","April","May","June","July","August","September","October","November","December"];
         return months[month];
     }
 
-    document.getElementById("target").innerHTML = getWeekDay() + " " + date + " " + getMonth() + " " + year + ", " + hour + ":" + min + ":" + sec;
+    changeTarget.innerHTML = getWeekDay() + " " + date + " " + getMonth() + " " + year + ", " + hour + ":" + min + ":" + sec;
     if (sec <= 9) {
-        document.getElementById("target").innerHTML = getWeekDay() + " " + date + " " + getMonth() + " " + year + ", " + hour + ":" + min + ":" + 0 + sec;
+        changeTarget.innerHTML = getWeekDay() + " " + date + " " + getMonth() + " " + year + ", " + hour + ":" + min + ":" + 0 + sec;
     }
     if (min <= 9) {
-        document.getElementById("target").innerHTML = getWeekDay() + " " + date + " " + getMonth() + " " + year + ", " + hour + ":" + 0 + min + ":" + sec;
+        changeTarget.innerHTML = getWeekDay() + " " + date + " " + getMonth() + " " + year + ", " + hour + ":" + 0 + min + ":" + sec;
     }
     if (hour <= 9) {
-        document.getElementById("target").innerHTML = getWeekDay() + " " + date + " " + getMonth() + " " + year + ", " + 0 + hour + ":" + 0 + min + ":" + sec;
+        changeTarget.innerHTML = getWeekDay() + " " + date + " " + getMonth() + " " + year + ", " + 0 + hour + ":" + 0 + min + ":" + sec;
     }
 
     setInterval(printTime, 1000);
 }
+
 printTime();
