@@ -9,8 +9,22 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
+(function () {
     // your code here
+    const passOne = document.querySelector('#pass-one');
+    const passTwo = document.querySelector('#pass-two');
+    const runButton = document.querySelector('#run');
+    const defaultEl=document.getElementById("pass-one");
+    const defaultColor=defaultEl.style.borderColor;
 
+    runButton.addEventListener('click', function () {
+        if (passOne.value!= passTwo.value) {
+            passOne.style.borderColor = "red";
+            passTwo.style.borderColor = "red";
+        }
+        else{
+            passOne.style.borderColor = defaultColor;
+            passTwo.style.borderColor = defaultColor;
+        }
+    })
 })();
