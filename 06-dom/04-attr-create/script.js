@@ -12,7 +12,7 @@
 (function() {
 
     // your code here
-    let sourceOriginal=document.getElementById("source").dataset.image;
+    let sourceOriginal=document.getElementById("source").dataset.image;//get resource
     let img=document.createElement("img");
     img.src=sourceOriginal;
     document.getElementById("target").appendChild(img);
