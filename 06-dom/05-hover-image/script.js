@@ -14,9 +14,9 @@
     // your code here
     const img = document.querySelector('img');
     const src = img.src;
+    const hover = img.dataset.hover;
 
     img.addEventListener('mouseover', () => {
-        const hover = img.dataset.hover;
         img.src = hover;
     });
     img.addEventListener('mouseout', () => {
