@@ -12,5 +12,11 @@
 (function() {
 
     // your code here
+    let sourceOriginal=document.getElementById("source").dataset.image;
+    let img=document.createElement("img");
+    img.src=sourceOriginal;
+    document.getElementById("target").appendChild(img);
+    document.getElementById("source").remove();
+
 
 })();
