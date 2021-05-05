@@ -11,4 +11,20 @@
 
 (() => {
     // your code here
+
+    const target = document.querySelector('#target');
+    const run = document.querySelector('#run');
+    const template = document.querySelector('#tpl-hero');
+
+    async function getData(){
+        const id = document.querySelector('#hero-id').value;
+        let data = await fetch(`http://localhost:3000/heroes?id=${id}`);
+        let hero = await data.json();
+        return hero;
+    }
+
+    run.addEventListener('click',function (){
+
+    })
+
 })();
